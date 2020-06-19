@@ -12,6 +12,8 @@ html {
 
 a {
   display: inline-block;
+  text-decoration: none;
+  color: #546e7a;
 }
 
 ul,
@@ -22,7 +24,10 @@ li {
 }
 
 body {
-  font-family: "Roboto-Regular";
+  font-family: 'Roboto-Regular';
+  font-size: 15px;
+  line-height: 24px;
+  color: #546e7a;
 }
 
 .container {
@@ -32,9 +37,10 @@ body {
 }
 
 @font-face {
-  font-family: 'Roboto-Regular, sans-serif';
-  src: url("..fonts/Roboto-Regular.woff2") format("woff2"), url("..fonts/Roboto-Regular.woff") format("woff");
+  font-family: "Roboto-Regular", sans-serif;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-display: swap;
 }
 
 .header__top-inner {
