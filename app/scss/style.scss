@@ -142,7 +142,7 @@
         color           : $bg;
         cursor          : pointer;
 
-        &+button {
+        & + button {
             margin-left: 5px;
         }
 
@@ -246,6 +246,7 @@
         color           : $bg;
         padding         : 20px 30px;
         cursor          : pointer;
+
         &.mixitup-control-active {
             background-color: $red;
             color           : #fff
