@@ -42,17 +42,22 @@ body {
 
 }
 
-@media (max-width: 720px){
+@media (max-width: 720px) {
     .container-fluid {
         padding: 0 15px;
     }
 }
 
+.svg image {
+    stroke-width: inherit;
+    color       : inherit;
+}
+
 .title {
-    text-align : center;
-    color      : $bg;
-    font-weight: 700;
-    font-size  : 36px;
-    line-height: 60px;
+    text-align: center;
+    color     : $bg;
+    @include f700;
+    font-size    : 36px;
+    line-height  : 60px;
     margin-bottom: 30px;
 }
