@@ -3,6 +3,10 @@
 @import 'fonts';
 //start header
 
+.header{
+    background-color: #fff;
+}
+
 .header__top-inner {
     display        : flex;
     justify-content: space-between;
@@ -112,15 +116,19 @@
     span {
         background-color: $tomato;
     }
+
 }
 
 .basket {
+    margin-right: 20px;
+
     span {
         background-color: $green;
     }
 }
 
-.header__btn-login--of {
+
+.header__btn-login--off {
     display: none;
 }
 
@@ -132,8 +140,8 @@
     }
 }
 
+
 .user {
-    margin-left  : 20px;
     margin-right : 25px;
     padding-right: 20px;
     position     : relative;
@@ -199,7 +207,11 @@
     }
 }
 
-
+.circle__menu {
+    position: absolute;
+    top     : 69px;
+    z-index : 1;
+}
 
 .user__box,
 .basket__box,
@@ -220,10 +232,7 @@
     }
 }
 
-.circle__menu {
-    position: absolute;
-    top     : 69px;
-}
+
 
 .circle__menu {
     border-top: 1px solid #e0e0e0;
@@ -357,6 +366,11 @@
 
 .icons-color::before {
     color: $tomato;
+}
+
+.header__btn-menu,
+.menu__btn{
+    display: none;
 }
 
 
@@ -945,7 +959,7 @@
     }
 }
 
-//endfooter
+//end footer
 
 //startproduct-page
 
@@ -1095,7 +1109,6 @@
 .product-page__aside {
 
     .product__item {
-
         box-shadow: none;
     }
 
@@ -1107,6 +1120,11 @@
         padding      : 0px;
         min-height   : 75px;
         border-bottom: none;
+    }
+
+    .product__item-info {
+        padding   : 0px;
+        min-height: 0px;
     }
 
     .product__item-title {
@@ -1122,14 +1140,14 @@
     }
 
     .rate-star {
-        margin-right: -6px;
+        margin-right: 0px;
     }
 
     .product__item-autor .avatar {
         margin-right: 9px;
     }
 
-    .jr-ry-container {
+    .jq-ry-container {
         padding: 0;
     }
 
@@ -1153,17 +1171,17 @@
         margin-top   : 25px;
     }
 
-
-
-    .top-sellers__link {
-        padding         : 16px 10px;
-        display         : block;
-        background-color: $green;
-        color           : #fff;
-        @include f500;
-        text-align: center;
-    }
 }
+
+.top-sellers__link {
+    padding         : 16px 10px;
+    display         : block;
+    background-color: $green;
+    color           : #fff;
+    @include f500;
+    text-align: center;
+}
+
 
 .product-page__filter {
     background-color: #fff;
@@ -1220,7 +1238,7 @@ button.icon-unsorted {
     }
 
     .product__item-img {
-        min-height: 120px;
+        min-height: 180px;
     }
 
     .product__item-content {
@@ -1237,7 +1255,7 @@ button.icon-unsorted {
     }
 
     .rate-star {
-        margin-right: -6px;
+        margin-right: 5px;
     }
 
     .jq-ry-container {
@@ -1253,7 +1271,7 @@ button.icon-unsorted {
 }
 
 
-.pagination {
+.pagination__list {
     li {
         display: inline-block;
 
@@ -1282,6 +1300,10 @@ button.icon-unsorted {
     }
 }
 
+.product__item-text {
+    display: none;
+}
+
 .product__item-price {
     span {
         display: none;
@@ -1294,7 +1316,7 @@ button.icon-unsorted {
     .icon-comment-o,
     .icon-heart-o {
         display     : inline-block;
-        font-size   : 12p;
+        font-size   : 12px;
         color       : #70838d;
         padding-left: 50px;
         border-left : 1px solid #aeb4bb;
@@ -1324,22 +1346,14 @@ button.icon-unsorted {
     }
 }
 
-.product__item-text {
-    display: none;
-}
-
-.product__item-list {
-    display: none;
-}
-
 .product__item {
     &.list {
         max-width: 100%;
 
         .product__item-img {
             width     : 240px;
-            min-height: 100%;
             float     : left;
+            min-height: 100%;
         }
 
         .product__item-text {
@@ -1361,9 +1375,9 @@ button.icon-unsorted {
             }
         }
 
-        .product__item-info {
+        /* .product__item-info {
             display: flex;
-        }
+        }*/
 
         .product__item-name {
             max-width: 480px;
@@ -1380,9 +1394,15 @@ button.icon-unsorted {
         .products__item-star {
             margin-left : auto;
             margin-right: 30px;
-        }
-    }
 
+        }
+
+    }
 }
 
+
+
 //end product-page
+
+
+@import'media';
